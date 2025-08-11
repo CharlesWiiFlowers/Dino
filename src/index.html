@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Super Dino Game</title>
+    <style href="style.css">
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        canvas {
+            border: 1px solid #000;
+            background-color: #fff;
+        }
+        #instructions {
+            margin-top: 20px;
+        }
+        #restartBtn {
+            justify-content: center;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #audio{
+            display: none; /* Hide audio controls */
+        }
+
+        .bgMusic {
+            display:contents; /* Hide audio controls */
+        }
+    </style>
+
+    <audio id="jumpSound" src="jump.wav" preload="auto"></audio>
+    <audio id="powerLoadSound" src="power.wav" preload="auto"></audio>
+    <audio id="powerUpSound" src="powerupsound.wav" preload="auto"></audio>
+    <audio id="bgMusic" src="bg_music.mp3" preload="auto" loop></audio>
+
+</head>
+<body>
+    <h1>🐱‍🏍 Super Dino Game</h1>
+    <canvas id="gameCanvas" width="800" height="250"></canvas>
+    <div id="instructions">
+        Press ↑ to jump, SPACE to trigger a question.<br>
+        Answer YES (↑) or NO (↓) when a question appears.<br>
+        Use power-ups to pass big obstacles!
+    </div>
+    <button id="restartBtn">Restart Game</button>
+
+    <script src="game.js"></script>
+</body>
+</html>
