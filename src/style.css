@@ -1,0 +1,22 @@
+body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        canvas {
+            background-color: #cceeff;
+            display: block;
+            margin: auto;
+            border: 2px solid #333;
+        }
+        #instructions {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+        #restartBtn {
+            display: none;
+            padding: 8px 16px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
