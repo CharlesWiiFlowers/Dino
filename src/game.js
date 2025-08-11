@@ -189,7 +189,7 @@ function update() {
         ctx.drawImage(img, o.x, o.y - o.height + 20, o.width, o.height);
     });
 
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "white";
     ctx.font = "16px Arial";
     ctx.textAlign = "right";
     ctx.fillText("Score: " + score, canvas.width - 10, 20);
@@ -203,6 +203,7 @@ function update() {
     if (message) {
         ctx.textAlign = "center";
         ctx.font = "20px Arial";
+        ctx.fillStyle = "white";
         ctx.fillText(message, canvas.width / 2, 50);
     }
 
