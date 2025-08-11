@@ -32,6 +32,7 @@ bgImg.src = "bg.png"; // imagen de fondo
 
 const restartBtn = document.getElementById("restartBtn");
 const jumpSound = document.getElementById("jumpSound");
+const deadSound = document.getElementById("deadSound");
 const powerLoadSound = document.getElementById("powerLoadSound");
 const powerUpSound = document.getElementById("powerUpSound");
 const bgMusic = document.getElementById("bgMusic");
@@ -54,6 +55,7 @@ function startGame() {
     requestAnimationFrame(update);
     bgMusic.play();
     bgMusic.volume = 0.5;
+    deadSound.pause();
 }
 
 function resetGame() {
@@ -212,6 +214,8 @@ function update() {
         ctx.font = "40px Arial";
         ctx.fillStyle = "red";
         ctx.fillText("GAME OVER", canvas.width / 2, canvas.height / 2);
+        bgMusic.pause();
+        deadSound.play();
     }
 
     requestAnimationFrame(update);
